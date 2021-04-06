@@ -1,0 +1,18 @@
+[
+    {
+      "name": "The Edge",
+      "email": "theedge@u2.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Animal",
+      "email": "animal@muppets.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Gene Simmons",
+      "email": "Genie@kiss.com",
+      "password": "password12345"
+    }
+  ]
+  
