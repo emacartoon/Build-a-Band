@@ -7,7 +7,6 @@ class Bandmember extends Model {}
 Bandmember.init(
      {
       id: {
-        // define columns
         type: DataTypes.INTEGER,
         allowNull: false,
         autoIncrement: true,
@@ -31,6 +30,10 @@ Bandmember.init(
         validate: {
             len: [8],
         },
+      },
+      Bandmember_talent: {
+        type: DataTypes.ARRAY,
+        allowNull: false
       },
     },
     {
