@@ -15,7 +15,7 @@
 
 ## Description
  
-Build-a-Band is an MVC for music related classifieds. It allows single users or bands to sign-up, browse, search, post an opening, and reply to prospective members. The option to search categories allows a user to see results that match their specific criteria. Users/bands can create a profile which can be viewed by other users. 
+Build-a-Band is an MVC for music related classifieds. It allows single users or bands to sign-up, browse, search, post an opening, and reply to prospective members. The option to search categories allows a user to see results that match their specific criteria. Users/bands can create a profile which can be viewed by other users. Users/bands can post looking for other users/bands.
   
 ## License
  
