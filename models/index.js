@@ -72,6 +72,32 @@ Post.hasOne(User, {
     foreignKey: 'post_id'
   });
 
+//Create Tag model relations
+Tag.hasMany(User, {
+    foreignKey: 'tag_id',
+  });
+    
+  User.belongsTo(Tag, {
+    foreignKey: 'tag_id'
+  });
+  
+  Tag.hasMany(Post, {
+    foreignKey: 'tag_id',
+    onDelete: 'CASCADE',
+  });
+        
+  Post.belongsTo(Tag, {
+    foreignKey: 'tag_id'
+  });
+  
+  Tag.hasMany(Category, {
+    foreignKey: 'tag_id',
+  });
+      
+  Category.belongsTo(Tag, {
+    foreignKey: 'tag_id'
+  });
+  
 //Create Band model relations
 Band.hasMany(User, {
   foreignKey: 'band_id',
