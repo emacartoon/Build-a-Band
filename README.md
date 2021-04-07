@@ -103,14 +103,27 @@ Screenshot of Terminal output
   
 ## Questions
  
-If you have any questions about this project, or happen to use this project, please reach out to me!
+If you have any questions about this project, or happen to use this project, please reach out to us!
+<br>
 Email: emacartoon@gmail.com
-GitHub: @EmaCartoon
+<br>
+GitHub: [@EmaCartoon](https://github.com/EmaCartoon)
+
+
 Email: danomiterock@gmail.com
-GitHub: @Danomiterock
+<br>
+GitHub: [@Danomiterock](https://github.com/Danomiterock)
+
+
 Email: nooromar305@gmail.com
-Github: @NoorA1125
- 
+<br>
+Github: [@NoorA1125](https://github.com/NoorA1125)
+
+
+Email: drowekorte@gmail.com
+<br>
+Github: [@drowekorte](https://github.com/Drowekorte)
+
  
 ## Credits
  
