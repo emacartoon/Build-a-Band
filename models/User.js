@@ -7,9 +7,10 @@ const Category = require('./Category')
 
 const { Model, DataTypes, INTEGER } = require("sequelize");
 const sequelize = require("../config/config.js");
-class Bandmember extends Model {}
 
-Bandmember.init(
+class User extends Model {}
+
+User.init(
      {
       id: {
         type: DataTypes.INTEGER,
@@ -17,11 +18,11 @@ Bandmember.init(
         autoIncrement: true,
         primaryKey: true,
       },
-      Bandmember_name: {
+      User_name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      Bandmember_email: {
+      User_email: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
@@ -29,14 +30,14 @@ Bandmember.init(
             isEmail: true,
         },
       },
-       Bandmember_password: {
+       User_password: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
             len: [8],
         },
       },
-      Bandmember_talent: {
+      User_talent: {
         type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false
       },
@@ -46,7 +47,7 @@ Bandmember.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: "bandmember",
+      modelName: "User",
     }
 
 );
