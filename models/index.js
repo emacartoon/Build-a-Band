@@ -1,3 +1,4 @@
+//require all models
 const User = require('./User');
 const Post = require('./Post');
 const Tag = require('./Tags')
