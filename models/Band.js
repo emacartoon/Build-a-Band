@@ -39,6 +39,13 @@ Band.init(
           key: 'id',
         },
       },
+      post:{
+        type: DataTypes.STRING,
+        reference: {
+          model: 'Post',
+          key: 'id',
+        },
+      },
       tag: {
         type: DataTypes.STRING,
         references: {

@@ -20,11 +20,11 @@ Post.init(
         autoIncrement: true,
         primaryKey: true,
       },
-      Post_name: {
+      name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      Post_email: {
+      body: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
@@ -32,16 +32,33 @@ Post.init(
             isEmail: true,
         },
       },
-       Post_password: {
+      user: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            len: [8],
+        reference: {
+          model: 'User',
+          key: 'id',
         },
       },
-      Post_talent: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        allowNull: false
+      band: {
+        type: DataTypes.STRING,
+        reference: {
+          model: 'Band',
+          key: 'id',
+        },
+      },
+      tag: {
+        type: DataTypes.STRING,
+        references: {
+          model: 'Tag',
+          key: 'id',
+        },
+      },
+      category: {
+        type: DataTypes.STRING,
+        references: {
+          model: 'Category',
+          key: 'id',
+        },
       },
     },
     {
