@@ -1,7 +1,12 @@
+//require all models
+const User = require('./User');
+const Post = require('./Post');
+const Tag = require('./Tags')
+const Band = require('./Band')
+const Category = require('./Category')
+
 const { Model, DataTypes, INTEGER } = require("sequelize");
-
 const sequelize = require("../config/config.js");
-
 class Bandmember extends Model {}
 
 Bandmember.init(
@@ -46,5 +51,7 @@ Bandmember.init(
 
 );
 
-module.exports = Bandmember;
+
+//Export all models
+module.exports = { User, Post, Tag, Band, Category };
 
