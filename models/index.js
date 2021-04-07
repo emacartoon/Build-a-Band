@@ -4,7 +4,7 @@ const Tag = require('./Tags')
 const Band = require('./Band')
 const Category = require('./Category')
 
-//Define User relations
+//Define User model relations
 User.hasMany(Post, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
@@ -37,7 +37,43 @@ User.hasMany(Category, {
 Category.belongsTo(User, {
   foreignKey: 'user_id'
 });
+
+//Create Band model relations
+Band.hasMany(User, {
+  foreignKey: 'band_id',
+});
   
+User.belongsTo(Band, {
+  foreignKey: 'band_id'
+});
+
+Band.hasMany(Post, {
+  foreignKey: 'band_id',
+  onDelete: 'CASCADE',
+});
+      
+Post.belongsTo(Band, {
+  foreignKey: 'band_id'
+});
+
+Band.hasMany(Tag, {
+  foreignKey: 'band_id',
+});
+    
+Tag.belongsTo(Band, {
+  foreignKey: 'band_id'
+});
+
+Band.hasMany(Category, {
+  foreignKey: 'band_id',
+});
+      
+Category.belongsTo(Band, {
+  foreignKey: 'band_id'
+});
+
+
+
   
 
 module.exports = { User, Post, Tag, Band, Category };
