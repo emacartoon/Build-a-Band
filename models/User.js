@@ -1,7 +1,7 @@
 //require all models
 const User = require('./User');
 const Post = require('./Post');
-const Tag = require('./Tags')
+const Tag = require('./Tag')
 const Band = require('./Band')
 const Category = require('./Category')
 
@@ -49,7 +49,6 @@ User.init(
       underscored: true,
       modelName: "User",
     }
-
 );
 
 

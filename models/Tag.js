@@ -5,9 +5,9 @@ const Tag = require('./Tag')
 const Band = require('./Band')
 const Category = require('./Category')
 
-class Post extends Model {}
+class Tag extends Model {}
 
-Post.init(
+Tag.init(
      {
       id: {
         type: DataTypes.INTEGER,
@@ -15,11 +15,11 @@ Post.init(
         autoIncrement: true,
         primaryKey: true,
       },
-      Post_name: {
+      Tag_name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      Post_email: {
+      Tag_email: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
@@ -27,14 +27,14 @@ Post.init(
             isEmail: true,
         },
       },
-       Post_password: {
+       Tag_password: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
             len: [8],
         },
       },
-      Post_talent: {
+      Tag_talent: {
         type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false
       },
@@ -44,7 +44,7 @@ Post.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: "Post",
+      modelName: "Tag",
     }
 );
 
