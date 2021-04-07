@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
  
 # Title
  
@@ -42,7 +40,6 @@ Follow the prompts in your Terminal, and a ReadMe.md file will be created in you
  
 ## User Story
 ```
->>>>>>> ebeaad74bf713ae65b7eea0d53d7c70a5da054ff
 GIVEN a CMS-style music classifieds site
 WHEN I visit the site for the first time
 THEN I am presented with the homepage, which includes two talent ISO talent buttons and a “Sign-up banner”, all leading me to a signup/signin page to access the database.
@@ -73,9 +70,6 @@ THEN I am able to delete or update my post and taken back to an updated dashboar
 WHEN I click on the logout option in the navigation
 THEN I am signed out of the site
 WHEN I am idle on the page for more than a set time
-<<<<<<< HEAD
-THEN I am automatically signed out of the site 
-=======
 THEN I am automatically signed out of the site 
 ```
  
@@ -114,8 +108,9 @@ Email: emacartoon@gmail.com
 GitHub: @EmaCartoon
 Email: danomiterock@gmail.com
 GitHub: @Danomiterock
+Email: nooromar305@gmail.com
+Github: @NoorA1125
  
  
 ## Credits
  
->>>>>>> ebeaad74bf713ae65b7eea0d53d7c70a5da054ff
