@@ -39,6 +39,13 @@ User.init(
             len: [8],
         },
       },
+      post:{
+        type: DataTypes.STRING,
+        reference: {
+          model: 'Post',
+          key: 'id',
+        },
+      },
       band: {
         type: DataTypes.STRING,
         reference: {

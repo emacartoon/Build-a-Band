@@ -24,7 +24,28 @@ Category.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-   },
+    user: {
+      type: DataTypes.STRING,
+      reference: {
+        model: 'User',
+        key: 'id',
+      },
+    },
+    band: {
+      type: DataTypes.STRING,
+      reference: {
+        model: 'Band',
+        key: 'id',
+      },
+    },
+    tag: {
+      type: DataTypes.STRING,
+      references: {
+        model: 'Tag',
+        key: 'id',
+      },
+    },
+  },
   {
     sequelize,
     timestamps: false,
