@@ -32,7 +32,7 @@ Bandmember.init(
         },
       },
       Bandmember_talent: {
-        type: DataTypes.ARRAY,
+        type: DataTypes.ARRAY(DataTypes.STRING),
         allowNull: false
       },
     },
