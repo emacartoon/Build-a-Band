@@ -108,6 +108,8 @@ Email: emacartoon@gmail.com
 GitHub: @EmaCartoon
 Email: danomiterock@gmail.com
 GitHub: @Danomiterock
+Email: nooromar305@gmail.com
+Github: @NoorA1125
  
  
 ## Credits
