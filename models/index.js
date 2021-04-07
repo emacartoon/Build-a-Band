@@ -72,6 +72,32 @@ Category.belongsTo(Band, {
   foreignKey: 'band_id'
 });
 
+//Create Category model relations
+Category.hasMany(User, {
+    foreignKey: 'category_id',
+  });
+    
+  User.belongsTo(Category, {
+    foreignKey: 'category_id'
+  });
+  
+  Category.hasMany(Post, {
+    foreignKey: 'category_id',
+    onDelete: 'CASCADE',
+  });
+        
+  Post.belongsTo(Category, {
+    foreignKey: 'category_id'
+  });
+  
+  Category.hasMany(Tag, {
+    foreignKey: 'category_id',
+  });
+      
+  Tag.belongsTo(Category, {
+    foreignKey: 'category_id'
+  });
+  
 
 
   
