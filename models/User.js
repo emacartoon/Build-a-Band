@@ -1,3 +1,7 @@
+//require sequelize, model, datatypes
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/config.js");
+
 //require all models
 const User = require('./User');
 const Post = require('./Post');
@@ -5,9 +9,7 @@ const Tag = require('./Tag')
 const Band = require('./Band')
 const Category = require('./Category')
 
-const { Model, DataTypes, INTEGER } = require("sequelize");
-const sequelize = require("../config/config.js");
-
+//extend model
 class User extends Model {}
 
 User.init(
@@ -18,11 +20,11 @@ User.init(
         autoIncrement: true,
         primaryKey: true,
       },
-      User_name: {
+      name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      User_email: {
+      email: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
@@ -30,16 +32,40 @@ User.init(
             isEmail: true,
         },
       },
-       User_password: {
+       password: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
             len: [8],
         },
       },
-      User_talent: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        allowNull: false
+      post:{
+        type: DataTypes.STRING,
+        reference: {
+          model: 'Post',
+          key: 'id',
+        },
+      },
+      band: {
+        type: DataTypes.STRING,
+        reference: {
+          model: 'Band',
+          key: 'id',
+        },
+      },
+      tag: {
+        type: DataTypes.STRING,
+        references: {
+          model: 'Tag',
+          key: 'id',
+        },
+      },
+      category: {
+        type: DataTypes.STRING,
+        references: {
+          model: 'Category',
+          key: 'id',
+        },
       },
     },
     {

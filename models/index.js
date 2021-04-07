@@ -23,14 +23,6 @@ Tag.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-User.hasMany(Band, {
-  foreignKey: 'user_id',
-});
-  
-Band.belongsTo(User, {
-  foreignKey: 'user_id'
-});
-
 User.hasMany(Category, {
   foreignKey: 'user_id',
 });
@@ -100,14 +92,6 @@ Tag.hasMany(User, {
   });
   
 //Create Band model relations
-Band.hasMany(User, {
-  foreignKey: 'band_id',
-});
-  
-User.belongsTo(Band, {
-  foreignKey: 'band_id'
-});
-
 Band.hasMany(Post, {
   foreignKey: 'band_id',
   onDelete: 'CASCADE',

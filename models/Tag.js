@@ -1,3 +1,7 @@
+//require sequelize, model, datatypes
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/config.js");
+
 //require all models
 const User = require('./User');
 const Post = require('./Post');
@@ -5,6 +9,7 @@ const Tag = require('./Tag')
 const Band = require('./Band')
 const Category = require('./Category')
 
+//extend model
 class Tag extends Model {}
 
 Tag.init(
@@ -15,28 +20,30 @@ Tag.init(
         autoIncrement: true,
         primaryKey: true,
       },
-      Tag_name: {
+      name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      Tag_email: {
+      user: {
         type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-        validate: {
-            isEmail: true,
+        reference: {
+          model: 'User',
+          key: 'id',
         },
       },
-       Tag_password: {
+      band: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            len: [8],
+        reference: {
+          model: 'Band',
+          key: 'id',
         },
       },
-      Tag_talent: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        allowNull: false
+      category: {
+        type: DataTypes.STRING,
+        references: {
+          model: 'Category',
+          key: 'id',
+        },
       },
     },
     {

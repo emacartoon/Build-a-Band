@@ -2,7 +2,7 @@
 # Build-a-Band
  
 ## Table of Contents
- 
+
 * [License](#license)
 * [Links](#links)
 * [User Story](#user-story)
