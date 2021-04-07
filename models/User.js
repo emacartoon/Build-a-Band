@@ -9,7 +9,7 @@ const Tag = require('./Tag')
 const Band = require('./Band')
 const Category = require('./Category')
 
-//Extend Model
+//extend model
 class User extends Model {}
 
 User.init(
@@ -20,11 +20,11 @@ User.init(
         autoIncrement: true,
         primaryKey: true,
       },
-      User_name: {
+      name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      User_email: {
+      email: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
@@ -32,16 +32,33 @@ User.init(
             isEmail: true,
         },
       },
-       User_password: {
+       password: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
             len: [8],
         },
       },
-      User_talent: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        allowNull: false
+      band: {
+        type: DataTypes.STRING,
+        reference: {
+          model: 'Band',
+          key: 'id',
+        },
+      },
+      tag: {
+        type: DataTypes.STRING,
+        references: {
+          model: 'Tag',
+          key: 'id',
+        },
+      },
+      category: {
+        type: DataTypes.STRING,
+        references: {
+          model: 'Category',
+          key: 'id',
+        },
       },
     },
     {

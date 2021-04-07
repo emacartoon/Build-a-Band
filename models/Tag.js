@@ -9,7 +9,7 @@ const Tag = require('./Tag')
 const Band = require('./Band')
 const Category = require('./Category')
 
-//Extend Model
+//extend model
 class Tag extends Model {}
 
 Tag.init(
@@ -20,30 +20,11 @@ Tag.init(
         autoIncrement: true,
         primaryKey: true,
       },
-      Tag_name: {
+      name: {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      Tag_email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-        validate: {
-            isEmail: true,
-        },
-      },
-       Tag_password: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            len: [8],
-        },
-      },
-      Tag_talent: {
-        type: DataTypes.ARRAY(DataTypes.STRING),
-        allowNull: false
-      },
-    },
+     },
     {
       sequelize,
       timestamps: false,
