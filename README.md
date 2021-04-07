@@ -5,10 +5,8 @@
 
 * [License](#license)
 * [Links](#links)
-* [Installation Instructions](#installation-instructions)
 * [User Story](#user-story)
 * [Technology Used](#technology-used)
-* [Tests](#tests)
 * [Mockups and Screenshots](#mockups-and-screenshots)
 * [Questions](#questions)
 * [Credits](#credits)
@@ -25,21 +23,6 @@ Build-a-Band is an MVC for music related classifieds. It allows single users or 
  
 * [Github Repository](https://github.com/Danomiterock/Build-a-Band/pull/14) 
 * Heroku App: 
-  
-## Installation Instructions
- 
-After you clone down your repo, you will need to install Node.js in your environment. This should be easily achieved with:
- 
-```
-npm i
-```
- 
-To run the generator, use Node to run the index script:
-```
-node index.js
-```
- 
-Follow the prompts in your Terminal, and a ReadMe.md file will be created in your main folder.
  
 ## User Story
 
@@ -88,20 +71,26 @@ MySQL2
 Jaws DB
 Bulma 
 Bcrypt
-Lint
+ESLint
 Dotenv
-
-  
- 
-  
-## Tests
- 
-
   
 ## Mockups and Screenshots
+### Wireframes
+![Home Page](./Wireframe/1-HomePage.png)
+Home Page - First view before sign in
 
-![Screenshot of Terminal output](./Screenshot.png)
-Screenshot of Terminal output
+![Sign In Page](./Wireframe/2-SignIn.png)
+Sign In Page - Username and Password
+
+![Search Page](./Wireframe/3-Search.png)
+Search Page - First page after login
+
+![My Profile Page](./Wireframe/4-MyProfile.png)
+Profile Page - Personal Profile
+
+![Band Profile Page](./Wireframe/5-BandPage.png)
+Band Profile Page - Band Page and Profiles of Members
+
   
 ## Questions
  
