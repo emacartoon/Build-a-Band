@@ -9,7 +9,7 @@ const Tag = require('./Tag')
 const Band = require('./Band')
 const Category = require('./Category');
 
-//Extend Model
+//extend model
 class Band extends Model {}
 
 Band.init(
