@@ -158,8 +158,5 @@ Category.hasMany(User, {
     foreignKey: 'category_id'
   });
   
-
-
-  
-
+//Export all models
 module.exports = { User, Post, Tag, Band, Category };
