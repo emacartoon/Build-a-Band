@@ -106,6 +106,8 @@ Screenshot of Terminal output
 If you have any questions about this project, or happen to use this project, please reach out to me!
 Email: emacartoon@gmail.com
 GitHub: @EmaCartoon
+Email: danomiterock@gmail.com
+GitHub: @Danomiterock
  
  
 ## Credits
