@@ -144,4 +144,4 @@ Category.hasMany(User, {
   });
   
 //Export all models
-module.exports = { User, Post, Tag, Band, Category };
+module.exports = { User, Post, Band};
