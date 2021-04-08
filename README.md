@@ -73,6 +73,7 @@ Bulma
 Bcrypt
 ESLint
 Dotenv
+Axios
   
 ## Mockups and Screenshots
 ### Wireframes

@@ -1,0 +1,56 @@
+{{> navbar}}
+{{> slideOutNav}}
+<div class="main container row">
+
+    <!-- =====SIDE NAV===== -->
+    {{> filters}}
+    
+    {{!-- POST FEED --}}
+    <div id="post-feed" class="col m9">
+
+        {{!-- SIGN UP --}}
+        {{#if signMeUp}}
+            {{> signup}}
+        {{/if}}
+
+        <!-- =====CREATE POST===== -->
+        {{#unless signMeUp}}
+            {{> writePost}}
+        {{/unless}}
+        <!-- ==^^^CREATE POST^^^== -->
+
+        {{!-- POSTS --}}
+        <div class="all-posts">
+            <h5>What's In Your Feed?</h5>
+            {{#if findPosts}}
+                    <h2>All Posts</h2>
+            {{/if}}
+            {{#if postsByZip}}
+                <h2>Posts In {{zip}}</h2>
+            {{/if}}
+            {{#if findUser}}
+                <h2>{{user}}'s Posts</h2>
+            {{/if}}
+            {{#if postsByTag}}
+                <h2>#{{tag}}</h2>
+            {{/if}}
+            {{#if tagAndZip}}
+                <h2>#{{tag}} in {{zip}}</h2>
+            {{/if}}
+            {{#if postsByTag}}
+                {{> postsByTag}}
+            {{/if}}
+            {{#unless postsByTag}}
+                {{> posts}}
+            {{/unless}}
+        </div>
+    </div>
+
+
+    <!-- ADD SPACE -->
+    {{!-- <div id="ad-space" class="col m2">
+        <h4>Ad Space</h4>
+        <p></p>
+    </div> --}}
+
+</div>
