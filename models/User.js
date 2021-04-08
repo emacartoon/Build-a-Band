@@ -1,7 +1,7 @@
 //require sequelize, model, datatypes
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/config.js");
-const { User } = require('../models');
+// const { User } = require('../models');
 
 //require all models
 // const User = require('./User');
@@ -79,5 +79,5 @@ User.init(
 
 
 //Export all models
-module.exports = { User, Post, Tag, Band, Category };
+module.exports = User;
 
