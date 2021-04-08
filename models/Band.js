@@ -31,12 +31,17 @@ Band.init(
       validate: {
         isEmail: true,
       },
-    },
-    user: {
-      type: DataTypes.STRING,
-      references: {
-        model: 'User',
-        key: 'id',
+      website: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        unique: true,
+        },
+      user: {
+        type: DataTypes.STRING,
+        references: {
+          model: 'User',
+          key: 'id',
+        },
       },
     },
     post: {
