@@ -32,6 +32,11 @@ Band.init(
             isEmail: true,
         },
       },
+      website: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        unique: true,
+        },
       user: {
         type: DataTypes.STRING,
         references: {
