@@ -6,6 +6,7 @@ const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/config.js');
+const { get } = require('./controllers');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
@@ -23,6 +24,11 @@ const sess = {
   })
 };
 
+async function getUser() {
+  const response = await axios.get('https://tamdp,user.me/api');
+  console.log(response.data);
+}
+
 app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
@@ -37,3 +43,5 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+getUser();
