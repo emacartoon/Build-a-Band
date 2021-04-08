@@ -11,10 +11,6 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
-        {
-          model: User,
-          attributes: ['name'],
-        },
       ],
     });
     
@@ -76,7 +72,7 @@ router.get('/post', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/post');
+    res.redirect('/dashboard');
     return;
   }
 
