@@ -1,0 +1,33 @@
+[
+    {
+      "id": "1",
+      "name": "The Pixies",
+      "email": "tink@pixiesmusic.com",
+      "user": "",
+      "post": "",
+      "band": "",
+      "tag": "",
+      "category": ""  
+    },
+    {
+      "id": "2",
+      "name": "Technomancer",
+      "email": "admin@technomancer.com",
+      "user": "",
+      "post": "",
+      "band": "",
+      "tag": "",
+      "category": ""  
+    },
+    {
+      "id": "3",
+      "name": "The Rolling Rocks",
+      "email": "rollrock@coverband.org",
+      "user": "",
+      "post": "",
+      "band": "",
+      "tag": "",
+      "category": ""  
+    }
+  ]
+  
