@@ -2,12 +2,12 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/config.js");
 
-//require all models
-const User = require('./User');
-const Post = require('./Post');
-const Tag = require('./Tag')
-const Band = require('./Band')
-const Category = require('./Category')
+// //require all models
+// const User = require('./User');
+// const Post = require('./Post');
+// const Tag = require('./Tag')
+// const Band = require('./Band')
+// const Category = require('./Category')
 
 //extend model
 class Post extends Model {}
@@ -71,4 +71,4 @@ Post.init(
 );
 
 //Export all models
-module.exports = { User, Post, Tag, Band, Category };
+module.exports = Post;
