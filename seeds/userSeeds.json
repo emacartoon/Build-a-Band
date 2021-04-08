@@ -1,18 +1,33 @@
 [
     {
+      "id": "1",
       "name": "The Edge",
       "email": "theedge@u2.com",
-      "password": "password12345"
+      "password": "password12345",
+      "post": "",
+      "band": "",
+      "tag": "",
+      "category": ""  
     },
     {
+      "id": "2",
       "name": "Animal",
       "email": "animal@muppets.com",
-      "password": "password12345"
+      "password": "password12345",
+      "post": "",
+      "band": "",
+      "tag": "",
+      "category": ""  
     },
     {
+      "id": "3",
       "name": "Gene Simmons",
       "email": "Genie@kiss.com",
-      "password": "password12345"
+      "password": "password12345",
+      "post": "",
+      "band": "",
+      "tag": "",
+      "category": ""  
     }
   ]
   
