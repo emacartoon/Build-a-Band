@@ -36,10 +36,10 @@ const seedDatabase = async () => {
   });
 
   //create bulk userbands data
-  const userbands = await UserBand.bulkCreate(userBandData, {
-    individualHooks: true,
-    returning: true,
-  });
+  // const userbands = await UserBand.bulkCreate(userBandData, {
+  //   individualHooks: true,
+  //   returning: true,
+  // });
 
 process.exit(0);
 };
