@@ -1,8 +1,32 @@
-{{> navbar}}
-{{> slideOutNav}}
-<div class="main container row">
+{{#each posts as |post| }}
 
-    <!-- =====SIDE NAV===== -->
+<div class="main container row">
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      {{{get_emoji}}}
+      <a href="/project/{{post.id}}">{{post.name}}</a>
+    </h2>
+    <p>
+      <span for="img" aria-label="money">💲</span>
+      <!-- Pass needed_funding value to the helper function -->
+      <span class="dollar-amount">{{format_amount post.needed_funding}}</span>
+      needed!
+    </p>
+    <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{post.description}}
+    </p>
+  </div>
+</div>
+</div>
+{{/each}}
+{{!-- {{> navbar}}
+{{> slideOutNav}} --}}
+    {{!-- <!-- =====SIDE NAV===== -->
     {{> filters}}
     
     {{!-- POST FEED --}}
@@ -22,29 +46,36 @@
         {{!-- POSTS --}}
         <div class="all-posts">
             <h5>What's In Your Feed?</h5>
+
             {{#if findPosts}}
                     <h2>All Posts</h2>
             {{/if}}
+
             {{#if postsByZip}}
                 <h2>Posts In {{zip}}</h2>
             {{/if}}
+
             {{#if findUser}}
                 <h2>{{user}}'s Posts</h2>
             {{/if}}
+
             {{#if postsByTag}}
                 <h2>#{{tag}}</h2>
             {{/if}}
+
             {{#if tagAndZip}}
                 <h2>#{{tag}} in {{zip}}</h2>
             {{/if}}
+
             {{#if postsByTag}}
                 {{> postsByTag}}
             {{/if}}
+
             {{#unless postsByTag}}
                 {{> posts}}
-            {{/unless}}
-        </div>
-    </div>
+            {{/unless}} --}}
+
+      
 
 
     <!-- ADD SPACE -->
@@ -53,4 +84,4 @@
         <p></p>
     </div> --}}
 
-</div>
+{{!-- </div> --}}
