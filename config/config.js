@@ -20,7 +20,6 @@ if (process.env.JAWSDB_URL) {
 }
 
 //set axios defaults
-const axios = require('axios');
 const oauth = require('axios-oauth-client');
 const tokenProvider = require('axios-token-interceptor');
 
@@ -28,8 +27,8 @@ const getOwnerCredentials = oauth.client(axios.create(), {
   // see example above
   url: 'https://oauth.com/2.0/token',
   grant_type: 'client_credentials',
-  client_id: 'foo',
-  client_secret: 'bar',
+  client_id: "user",
+  client_secret: 'SuperSecretSecret',
   scope: 'baz'
 })
 
