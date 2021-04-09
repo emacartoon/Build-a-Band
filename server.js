@@ -26,6 +26,9 @@ const session = require('express-session');
 //require sequelize store
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+//require axios
+const axios = require('axios').default;
+
 //controls session whether logged in or logout in
 const sess = {
   secret: 'Super secret secret',
@@ -42,8 +45,12 @@ const hbs = exphbs.create({ helpers });
 
 //get random user using axios
 async function getUser() {
-  const response = await axios.get('https://tamdp,user.me/api');
-  console.log(response.data);
+  try {
+    const response = await axios.get('/user?ID=12345');
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 //listen on PORT 3001
