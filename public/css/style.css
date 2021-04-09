@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+* {
+
+}
+
+body {
+
+}
+
+section {
+
+}
+
+ul li {
+  list-style: none;
+}
+=======
 header, .project:not(:last-child) {
     border-bottom: 1px solid #ccc;
   }
@@ -28,3 +45,4 @@ header, .project:not(:last-child) {
     flex-flow: row;
   }
   
+>>>>>>> 74fc39d6a96effa6c568d2bd55b42bddca51a7d3
