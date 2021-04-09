@@ -19,9 +19,9 @@
         <p>Postal: {{this.Post.Location}}</p>
         {{#if tag}}
             <span class="topics">Topics:
-
+                {{!-- {{#each tag}} --}}
                         <a href="/posts/tag/{{tag}}">#{{tag}}</a>
-
+                {{!-- {{/each}} --}}
             </span>
         {{/if}}
         <span class="time-stamp">Posted {{this.Post.createdAt}}</span>
