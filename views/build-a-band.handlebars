@@ -25,13 +25,13 @@
             {{#if findPosts}}
                     <h2>All Posts</h2>
             {{/if}}
-            {{#if postsByZip}}
-                <h2>Posts In {{zip}}</h2>
-            {{/if}}
+            {{!-- {{#if postsByZip}}
+                <h2>Posts In {{zip}}</h2> --}}
+            {{!-- {{/if}} --}}
             {{#if findUser}}
                 <h2>{{user}}'s Posts</h2>
             {{/if}}
-            {{#if postsByTag}}
+            {{!-- {{#if postsByTag}}
                 <h2>#{{tag}}</h2>
             {{/if}}
             {{#if tagAndZip}}
@@ -42,7 +42,7 @@
             {{/if}}
             {{#unless postsByTag}}
                 {{> posts}}
-            {{/unless}}
+            {{/unless}} --}}
         </div>
     </div>
 
