@@ -19,6 +19,11 @@ Band.hasMany(Post, {
   onDelete: "CASCADE",
 });
 
+Band.hasMany(User, {
+  foreignKey: "band_id",
+  onDelete: "CASCADE",
+});
+
 Post.belongsTo(Band, {
   foreignKey: "band_id",
 });
