@@ -2,15 +2,15 @@
 const sequelize = require('../config/config');
 
 //require models
-const { Band, Category, Post, Tag, User, UserBand } = require('../models');
+const { Band, Post, User, UserBand } = require('../models');
 
 //phase 1 create users, bands, and posts
 //phase 2 add category and post data
 const bandData = require('./bandSeeds.json');
-const catData = require('./catSeeds.json');
+// const catData = require('./catSeeds.json');
 const postData = require('./postSeeds.json');
-const tagData = require('./tagSeeds.json');
-const userBandData = require('./userBandSeeds.json');
+// const tagData = require('./tagSeeds.json');
+// const userBandData = require('./userBandSeeds.json');
 const userData = require('./userSeeds.json');
 
 //declare seedDatabase function
@@ -30,16 +30,18 @@ const seedDatabase = async () => {
   });
 
   //create bulk post data
-  const posts = await Post.bulkCreate(postData, {
-    individualHooks: true,
-    returning: true,
-  });
+  for (const post of postData) {
+    await Post.create({
+      ...post,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
 
   //create bulk userbands data
-  const userbands = await UserBand.bulkCreate(userBandData, {
-    individualHooks: true,
-    returning: true,
-  });
+  // const userbands = await UserBand.bulkCreate(userBandData, {
+  //   individualHooks: true,
+  //   returning: true,
+  // });
 
 process.exit(0);
 };
@@ -48,4 +50,4 @@ process.exit(0);
 seedDatabase();
 
 //export created data
-module.exports = users, bands, posts, userbands;
+// module.exports = users, bands, posts, userbands;

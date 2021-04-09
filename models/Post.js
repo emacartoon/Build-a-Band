@@ -2,12 +2,12 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/config.js");
 
-//require all models
-const User = require('./User');
-const Post = require('./Post');
-const Tag = require('./Tag')
-const Band = require('./Band')
-const Category = require('./Category')
+// //require all models
+// const User = require('./User');
+// const Post = require('./Post');
+// const Tag = require('./Tag')
+// const Band = require('./Band')
+// const Category = require('./Category')
 
 //extend model
 class Post extends Model {}
@@ -20,7 +20,7 @@ Post.init(
         autoIncrement: true,
         primaryKey: true,
       },
-      name: {
+      title: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -28,9 +28,6 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
-        validate: {
-            isEmail: true,
-        },
       },
       user: {
         type: DataTypes.STRING,
@@ -46,20 +43,20 @@ Post.init(
           key: 'id',
         },
       },
-      tag: {
-        type: DataTypes.STRING,
-        references: {
-          model: 'Tag',
-          key: 'id',
-        },
-      },
-      category: {
-        type: DataTypes.STRING,
-        references: {
-          model: 'Category',
-          key: 'id',
-        },
-      },
+    //   tag: {
+    //     type: DataTypes.STRING,
+    //     references: {
+    //       model: 'Tag',
+    //       key: 'id',
+    //     },
+    //   },
+    //   category: {
+    //     type: DataTypes.STRING,
+    //     references: {
+    //       model: 'Category',
+    //       key: 'id',
+    //     },
+    //   },
     },
     {
       sequelize,
@@ -71,4 +68,4 @@ Post.init(
 );
 
 //Export all models
-module.exports = { User, Post, Tag, Band, Category };
+module.exports = Post;

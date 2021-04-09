@@ -1,7 +1,7 @@
 //require sequelize, model, datatypes
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/config.js");
-const { User } = require('../models');
+// const { User } = require('../models');
 
 //require all models
 // const User = require('./User');
@@ -46,27 +46,27 @@ User.init(
           key: 'id',
         },
       },
-      band: {
-        type: DataTypes.STRING,
-        reference: {
-          model: 'Band',
-          key: 'id',
-        },
-      },
-      tag: {
-        type: DataTypes.STRING,
-        references: {
-          model: 'Tag',
-          key: 'id',
-        },
-      },
-      category: {
-        type: DataTypes.STRING,
-        references: {
-          model: 'Category',
-          key: 'id',
-        },
-      },
+      // band: {
+      //   type: DataTypes.STRING,
+      //   reference: {
+      //     model: 'userBand',
+      //     key: 'id',
+      //   },
+      // },
+      // tag: {
+      //   type: DataTypes.STRING,
+      //   references: {
+      //     model: 'Tag',
+      //     key: 'id',
+      //   },
+      // },
+      // category: {
+      //   type: DataTypes.STRING,
+      //   references: {
+      //     model: 'Category',
+      //     key: 'id',
+      //   },
+      // },
     },
     {
       sequelize,
@@ -79,5 +79,5 @@ User.init(
 
 
 //Export all models
-module.exports = { User, Post, Tag, Band, Category };
+module.exports = User;
 

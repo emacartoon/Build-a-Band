@@ -6,9 +6,7 @@
       "website": "www.pixiesmusic.com",
       "user": "",
       "post": "",
-      "band": "",
-      "tag": "",
-      "category": ""  
+      "band": ""
     },
     {
       "id": "2",
@@ -17,9 +15,7 @@
       "website": "www.technomancer.com",
       "user": "",
       "post": "",
-      "band": "",
-      "tag": "",
-      "category": ""  
+      "band": ""
     },
     {
       "id": "3",
@@ -28,9 +24,7 @@
       "website": "www.rollrock.bandcamp.com",
       "user": "",
       "post": "",
-      "band": "",
-      "tag": "",
-      "category": ""  
+      "band": ""
     },
     {
         "id": "4",
@@ -39,9 +33,6 @@
         "website": "www.shortbus.bandcamp.com",
         "user": "",
         "post": "",
-        "band": "",
-        "tag": "",
-        "category": ""  
-      }
-  ]
-  
+        "band": ""
+    }
+]

@@ -1,13 +1,13 @@
 //require sequelize, model, datatypes
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/config.js");
+const sequelize = require("../../config/config.js");
 
 //require all models
-const User = require('./User');
-const Post = require('./Post');
-const Tag = require('./Tag')
-const Band = require('./Band')
-const Category = require('./Category')
+const User = require('../../models/User');
+const Post = require('../../models/Post');
+// const Tag = require('./Tag')
+const Band = require('../../models/Band')
+// const Category = require('./Category')
 
 //extend model
 class Category extends Model {}
