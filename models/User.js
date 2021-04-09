@@ -46,27 +46,27 @@ User.init(
           key: 'id',
         },
       },
-      band: {
-        type: DataTypes.STRING,
-        reference: {
-          model: 'Band',
-          key: 'id',
-        },
-      },
-      tag: {
-        type: DataTypes.STRING,
-        references: {
-          model: 'Tag',
-          key: 'id',
-        },
-      },
-      category: {
-        type: DataTypes.STRING,
-        references: {
-          model: 'Category',
-          key: 'id',
-        },
-      },
+      // band: {
+      //   type: DataTypes.STRING,
+      //   reference: {
+      //     model: 'userBand',
+      //     key: 'id',
+      //   },
+      // },
+      // tag: {
+      //   type: DataTypes.STRING,
+      //   references: {
+      //     model: 'Tag',
+      //     key: 'id',
+      //   },
+      // },
+      // category: {
+      //   type: DataTypes.STRING,
+      //   references: {
+      //     model: 'Category',
+      //     key: 'id',
+      //   },
+      // },
     },
     {
       sequelize,

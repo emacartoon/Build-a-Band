@@ -2,7 +2,7 @@
 const sequelize = require('../config/config');
 
 //require models
-const { Band, Category, Post, Tag, User, UserBand } = require('../models');
+const { Band, Post, User, UserBand } = require('../models');
 
 //phase 1 create users, bands, and posts
 //phase 2 add category and post data
@@ -30,10 +30,12 @@ const seedDatabase = async () => {
   });
 
   //create bulk post data
-  const posts = await Post.bulkCreate(postData, {
-    individualHooks: true,
-    returning: true,
-  });
+  for (const post of postData) {
+    await Post.create({
+      ...post,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
 
   //create bulk userbands data
   // const userbands = await UserBand.bulkCreate(userBandData, {
