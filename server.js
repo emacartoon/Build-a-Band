@@ -65,11 +65,11 @@ app.use(express.urlencoded({ extended: true }));
 //app use public file
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app use api
-app.use('/', routes);
-
 //use session app
 app.use(session(sess));
+
+//app use api
+app.use(routes);
 
 //use handlebars
 app.engine('handlebars', hbs.engine);

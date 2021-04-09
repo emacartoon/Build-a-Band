@@ -5,6 +5,6 @@ const bandRoutes = require('./bandRoutes');
 
 router.use('/users', userRoutes);
 router.use('/posts', postRoutes);
-router.use('/posts', bandRoutes);
+router.use('/bands', bandRoutes);
 
 module.exports = router;
