@@ -1,8 +1,12 @@
+
 //require file path
 const path = require('path');
 
 //require express server
 const express = require('express');
+
+//use express app
+const app = express();
 
 //require express handlebars
 const exphbs = require('express-handlebars');
@@ -42,26 +46,20 @@ async function getUser() {
   console.log(response.data);
 }
 
-//may be redundant
-const app = express();
-
-//use express server
-const server = express();
-
 //listen on PORT 3001
 const PORT = process.env.PORT || 3001;
 
 //server user express
-server.use(express.json());
+app.use(express.json());
 
-//server use encoded url
+//app use encoded url
 app.use(express.urlencoded({ extended: true }));
 
-//server use public file
+//app use public file
 app.use(express.static(path.join(__dirname, 'public')));
 
-//server use api
-server.use('/api', routes);
+//app use api
+app.use('/api', routes);
 
 //use session app
 app.use(session(sess));
@@ -79,6 +77,3 @@ sequelize.sync({ force: false }).then(() => {
 
 //invoke getUser function
 getUser();
-
-//export express server
-module.exports = server;
