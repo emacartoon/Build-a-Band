@@ -5,9 +5,9 @@ const sequelize = require("../config/config.js");
 //require all models
 const User = require('./User');
 const Post = require('./Post');
-const Tag = require('./Tag')
+// const Tag = require('./Tag')
 const Band = require('./Band')
-const Category = require('./Category')
+// const Category = require('./Category')
 
 //extend model
 class Category extends Model {}
