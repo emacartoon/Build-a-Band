@@ -31,19 +31,19 @@ Band.init(
       validate: {
         isEmail: true,
       },
-      website: {
+    },
+    website: {
         type: DataTypes.STRING,
         allowNull: true,
         unique: true,
-        },
-      user: {
-        type: DataTypes.STRING,
-        references: {
-          model: 'User',
-          key: 'id',
-        },
-      },
     },
+    // user: {
+    //     type: DataTypes.STRING,
+    //     references: {
+    //       model: 'UserBand',
+    //       key: 'id',
+    //     },
+    // },
     post: {
       type: DataTypes.STRING,
       reference: {
@@ -51,20 +51,20 @@ Band.init(
         key: 'id',
       },
     },
-    tag: {
-      type: DataTypes.STRING,
-      references: {
-        model: 'Tag',
-        key: 'id',
-      },
-    },
-    category: {
-      type: DataTypes.STRING,
-      references: {
-        model: 'Category',
-        key: 'id',
-      },
-    },
+    // tag: {
+    //   type: DataTypes.STRING,
+    //   references: {
+    //     model: 'Tag',
+    //     key: 'id',
+    //   },
+    // },
+    // category: {
+    //   type: DataTypes.STRING,
+    //   references: {
+    //     model: 'Category',
+    //     key: 'id',
+    //   },
+    // },
   },
   {
     sequelize,

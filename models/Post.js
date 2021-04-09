@@ -20,7 +20,7 @@ Post.init(
         autoIncrement: true,
         primaryKey: true,
       },
-      name: {
+      title: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -28,9 +28,6 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
-        validate: {
-            isEmail: true,
-        },
       },
       user: {
         type: DataTypes.STRING,
@@ -46,20 +43,20 @@ Post.init(
           key: 'id',
         },
       },
-      tag: {
-        type: DataTypes.STRING,
-        references: {
-          model: 'Tag',
-          key: 'id',
-        },
-      },
-      category: {
-        type: DataTypes.STRING,
-        references: {
-          model: 'Category',
-          key: 'id',
-        },
-      },
+    //   tag: {
+    //     type: DataTypes.STRING,
+    //     references: {
+    //       model: 'Tag',
+    //       key: 'id',
+    //     },
+    //   },
+    //   category: {
+    //     type: DataTypes.STRING,
+    //     references: {
+    //       model: 'Category',
+    //       key: 'id',
+    //     },
+    //   },
     },
     {
       sequelize,

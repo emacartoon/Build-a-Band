@@ -14,9 +14,5 @@ const UserBand = sequelize.define('UserBands', {
     type: DataTypes.INTEGER,
     references: { model: User, key: 'id',}}});
 
-//define relationships
-Band.belongsToMany(User, {through: UserBands});
-User.belongsToMany(Band, {through: UserBands});
-
 //Export all models
 module.exports = { User, Band, UserBand };
