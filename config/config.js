@@ -20,17 +20,26 @@ if (process.env.JAWSDB_URL) {
 }
 
 //set axios defaults
-axios.defaults.baseURL = 'https://api.example.com';
-axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+const axios = require('axios');
+const oauth = require('axios-oauth-client');
+const tokenProvider = require('axios-token-interceptor');
 
-// Set config defaults when creating the instance
-const instance = axios.create({
-  baseURL: 'https://api.example.com'
-});
+const getOwnerCredentials = oauth.client(axios.create(), {
+  // see example above
+  url: 'https://oauth.com/2.0/token',
+  grant_type: 'client_credentials',
+  client_id: 'foo',
+  client_secret: 'bar',
+  scope: 'baz'
+})
 
-// Alter defaults after instance has been created
-instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+const instance = axios.create();
+instance.interceptors.request.use(
+  // Wraps axios-token-interceptor with oauth-specific configuration,
+  // fetches the token using the desired claim method, and caches
+  // until the token expires
+  oauth.interceptor(tokenProvider, getOwnerCredentials)
+);
 
 
 module.exports = sequelize;
