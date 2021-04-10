@@ -58,7 +58,6 @@ nav {
 }
 
 .row {
-  display: flex;
   justify-content: space-around;
   align-items: space;
 }
@@ -76,4 +75,9 @@ nav {
   text-align: center;
   text-decoration: none;
   right: 0;
+}
+
+.img-banner {
+  max-width: 300px;
+  height: auto;
 }
