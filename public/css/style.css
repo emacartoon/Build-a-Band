@@ -53,10 +53,11 @@ header, .project:not(:last-child) {
 
 nav {
   height: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .row {
-  display: flex;
   justify-content: space-around;
   align-items: space;
 }
@@ -73,6 +74,26 @@ nav {
   font-size: 1.4rem;
   text-align: center;
   text-decoration: none;
+  right: 0;
+}
+
+.home-page-img {
+  display:inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+
+}
+
+.home-page-img > .column {
+  margin-top: 10rem;
+  max-width: 300px;
+  height: auto;
+}
+
+.create-acc-txt {
+  text-align:center;
   margin-right: -20px;
 }
 
