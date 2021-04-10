@@ -93,6 +93,7 @@ header, .project:not(:last-child) {
 .create-acc-txt {
   text-align:center;
   font-size: 24px;
+  /* margin-right: -20px; ***** New code after pull, not sure if we need it, will comment out so it doesn't affect mine.*/ 
 }
 
 /* Side nav & Home Page content*/
@@ -124,7 +125,15 @@ input {
   width: 100%;
 }
 
+
+/* nav a {
+  text-decoration: none;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  font-size: 20px;
+  cursor: pointer;
+} */
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}

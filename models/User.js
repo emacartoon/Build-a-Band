@@ -11,7 +11,7 @@ const sequelize = require("../config/config.js");
 // const Category = require('./Category')
 
 //extend model
-class User extends Model {}
+class User extends Model {checkPassword()}
 User.init(
      {
       id: {
