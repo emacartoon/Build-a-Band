@@ -32,6 +32,13 @@ Band.init(
         isEmail: true,
       },
     },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+          len: [8],
+      },
+    },
     website: {
         type: DataTypes.STRING,
         allowNull: true,

@@ -75,3 +75,32 @@ nav {
   text-decoration: none;
   margin-right: -20px;
 }
+
+nav {
+  /* display: block; */
+  height: auto;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li {
+  color: var(--dark);
+}
+
+nav li:hover {
+  color: var(--hover);
+  border-bottom: var(--hover) 2px solid;
+}
+
+nav a {
+  text-decoration: none;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  font-size: 20px;
+  cursor: pointer;
+}
