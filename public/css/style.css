@@ -60,3 +60,7 @@ nav {
   justify-content: space-around;
   align-items: space;
 }
+
+.login-form, .signup-form {
+  width: 25vw;
+}
