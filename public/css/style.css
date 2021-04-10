@@ -45,11 +45,11 @@ header, .project:not(:last-child) {
     margin: auto;
   }
   
-.login, .signup {
+/* .login, .signup {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-}
+} */
 
 nav {
   height: 100%;
@@ -63,4 +63,15 @@ nav {
 
 .login-form, .signup-form {
   width: 25vw;
+}
+
+.login {
+  background-color: transparent; /* Green */
+  border: 1px solid #ffffff;
+  color: white;
+  padding: 8px 8px;
+  font-size: 1.4rem;
+  text-align: center;
+  text-decoration: none;
+  margin-right: -20px;
 }
