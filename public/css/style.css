@@ -43,3 +43,12 @@ header, .project:not(:last-child) {
     flex-flow: row;
   }
   
+.login, .signup {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+nav {
+  height: 100%;
+}
