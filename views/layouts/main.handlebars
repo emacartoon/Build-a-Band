@@ -25,11 +25,11 @@
     <header class="display-flex justify-space-between align-center p-2">
       <nav>
         <div class="logo">
-        <a href="/"><img src="/img/Build-a-Band_logo.png" alt="Build-a-Band"></a>
+        <a href="/"><img class="img-logo" src="/img/Build-a-Band_logo.png" alt="Build-a-Band"></a>
       </div>
-      <h1>
-        <a href="/">Build-a-Band</a>
-      </h1>
+      {{!-- <h5>
+        <a href="/">Build-a-Band</a> ------ I dont think we need this
+      </h5> --}}
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a class="signup" href="/dashboard">profile</a> |
