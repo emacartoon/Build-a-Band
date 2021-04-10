@@ -7,9 +7,9 @@ const withAuth = require('../../utils/auth');
 // get all post
 router.get('/build-a-band', async(req, res) => {
   try {
-    const postData = await Post.findAll({
-      include: [{ model: Post }, { model: User }, 
-      ]});
+    const postData = await User.findAll({
+      include: [{ model: User }, { model: Post }]
+    });
   // Serialize data so the template can read it
   const posts = postData.map((post) => post.get({ plain: true }));
 
