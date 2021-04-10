@@ -1,26 +1,33 @@
-{{#each users as |user| }}
-<div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2>{{{get_emoji}}} {{user.name}}</h2>
-  </div>
-  <div class="col-md-6">
-    <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
-  </div>
-</div>
-{{/each}}
+<div class="row">
+<div class="main-content">
+<div class="flex-container">
+<nav class="sidenav">
+  <ul>
+    <form>
+      <!--Search band name -->
+  <label for="fname">Search Band</label>
+  <input type="band" id="band" name="band">
 
-<div class="row align-center mb-5">
-    <div class="col-md-6">
-        <p>25 Artists<br>
-        looking for Bands</p>
-    </div>
-    <div class="col-md-6">
-        <p>5 Bands<br>
-        looking for Artists</p>
-    </div>
+  <!--Search band name -->
+  <label for="usernmae">Search User</label>
+  <input type="text" id="username" name="username">
+
+  <!--Search band name -->
+  <label for="zipcode">Search ZipCode</label>
+  <input type="text" id="zipcode" name="zipcode">
+</form>
+</nav>
+  <div class="flex-child">
+    <img class="img-banner" src="https://source.unsplash.com/random/200x200?sig=1" alt="Snow" style="width:100%">
+  </div>
+  
+  <div class="flex-child">
+    <img  class="img-banner" src="https://source.unsplash.com/random/200x200?sig=2" alt="Forest" style="width:100%">
+  </div>
 </div>
-<div class="row align-center mb-5">
-    <div class="col-md-12">
-        <a href="/login-signup"><strong>Create an account</strong></a> now to start searching!
-    </div>
+<h4 class="create-acc-txt">
+      <a href="/login-signup"><strong>Create An account</strong></a> now to start searching!
+  </h4>
 </div>
+</div>
+
