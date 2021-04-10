@@ -5,6 +5,9 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Build-a-Band</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{!-- google fonts --}}
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -16,6 +19,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="../css/style.css" rel="stylesheet" type="text/css" media="screen">
   {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/geolocator/2.1.3/geolocator.min.js"></script> --}}
+ <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script> 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/geolocator/2.1.3/geolocator.min.js"></script>
 
 
 </head>
@@ -31,11 +36,12 @@
         <a href="/">Build-a-Band</a> ------ I dont think we need this
       </h5> --}}
         <!-- Conditionally render login or logout links -->
+
         {{#if logged_in}}
-        <a class="signup" href="/dashboard">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a class="signup" href="/dashboard">Profile</a> |
+        <button class="no-button" id="logout">Logout</button>
         {{else}}
-        <a class="login" href="/login-signup">login</a>
+        <a class="login" href="/login-signup">Login</a>
         {{/if}}
       </nav>
     </header>
@@ -45,17 +51,18 @@
         {{#if logged_in}}
           <script src="/js/logout.js"></script>
         {{/if}}
+      
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <!--Not sure I will be using a JQuery. . . but for now. -->
   <script src="https://unpkg.com/popper.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/geolocator/2.1.3/geolocator.min.js"></script>
+  {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/geolocator/2.1.3/geolocator.min.js"></script> --}}
   <!--Zip code  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> <!-- Icons -->
-  <script src="/js/search.js"></script>
+  {{!-- <script src="/js/search.js"></script>
   <script src="/js/geolocator.js"></script>
   <!--Zip code  -->
-  <script src="/js/userPosts.js"></script>
+  <script src="/js/userPosts.js"></script> --}}
 
 </body>
 
