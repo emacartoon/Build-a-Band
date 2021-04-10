@@ -39,10 +39,9 @@ header, .project:not(:last-child) {
   }
   
   .img-logo {
-    display: block;
-    width: 100px;
-    height: 100px;
-    margin: auto;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
   }
   
 /* .login, .signup {
@@ -57,10 +56,10 @@ header, .project:not(:last-child) {
   justify-content: space-around;
 }
 
-.row {
+/* .row {
   justify-content: space-around;
   align-items: space;
-}
+} */
 
 .login-form, .signup-form {
   width: 25vw;
@@ -95,9 +94,10 @@ header, .project:not(:last-child) {
 }
 
 /* Side nav & Home Page content*/
-.sidenav {
-  height: 100%;
+nav.sidenav {
+  height: 100vh;
   width: 160px;
+  position: relative;
   z-index: 1;
   top: 0;
   left: 0;
@@ -119,9 +119,7 @@ header, .project:not(:last-child) {
 }
 
 .main-content {
-  margin-left: 160px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
 }
 
 @media screen and (max-height: 450px) {
