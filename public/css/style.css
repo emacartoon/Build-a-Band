@@ -38,17 +38,10 @@ header, .project:not(:last-child) {
     margin-left: -5px;
   }
   
-  .logo {
-    margin-left: 15px;
-    flex-flow: row;
+  .img-logo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
   }
   
-.login, .signup {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-nav {
-  height: 100%;
-}
