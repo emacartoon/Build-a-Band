@@ -14,6 +14,18 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/build-a-band', async (req, res) => {
+  try {
+
+    res.render('build-a-band', { 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) { 
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get('/post', async (req, res) => {
   try {
 
@@ -53,7 +65,7 @@ router.get('/dashboard', async (req, res) => {
 router.get('/login', async (req, res) => {
   try {
 
-    res.render('login', { 
+    res.render('login-signup', { 
       logged_in: req.session.logged_in 
     });
   } catch (err) { 
