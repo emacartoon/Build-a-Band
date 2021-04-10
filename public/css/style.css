@@ -96,7 +96,7 @@ header, .project:not(:last-child) {
 /* Side nav & Home Page content*/
 nav.sidenav {
   height: 100vh;
-  width: 160px;
+  width: 300px;
   position: relative;
   z-index: 1;
   top: 0;
@@ -119,7 +119,7 @@ nav.sidenav {
 }
 
 .main-content {
-  font-size: 28px; /* Increased text to enable scrolling */
+  
 }
 
 @media screen and (max-height: 450px) {
