@@ -26,18 +26,6 @@ router.get('/build-a-band', async (req, res) => {
   }
 });
 
-router.get('/post', async (req, res) => {
-  try {
-
-    res.render('single-post', { 
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) { 
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
 router.get('/create', async (req, res) => {
   try {
 
@@ -89,8 +77,8 @@ router.get('/post/:id', async (req, res) => {
 
     const post = postData.get({ plain: true });
 
-    res.render('post', {
-      ...post,
+    res.render('single-post', {
+      post,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -109,8 +97,8 @@ router.get('/post', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
 
-    res.render('dashboard', {
-      ...user,
+    res.render('writePost', {
+      user,
       logged_in: true
     });
   } catch (err) {
