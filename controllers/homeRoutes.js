@@ -14,10 +14,34 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/post', async (req, res) => {
+  try {
+
+    res.render('single-post', { 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) { 
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get('/create', async (req, res) => {
   try {
 
     res.render('writePost', { 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) { 
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.get('/dashboard', async (req, res) => {
+  try {
+
+    res.render('dashboard', { 
       logged_in: req.session.logged_in 
     });
   } catch (err) { 
@@ -37,6 +61,8 @@ router.get('/login', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 
 router.get('/post/:id', async (req, res) => {
   try {
