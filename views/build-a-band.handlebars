@@ -6,13 +6,13 @@
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
    
-      <a href="/project/{{post.id}}">{{post.name}}</a>
+      <a href="/post/{{post.id}}">{{post.name}}</a>
     </h2>
     <p>
-      <span for="img" aria-label="money"></span>
+      <span for="img" aria-label="post"></span>
       <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{post}}</span>
-      needed!
+      <span class="post-title">{{post}}</span>
+      
     </p>
     <p>Created by {{post.user.name}} on {{ post.date_created}}</p>
   </div>
