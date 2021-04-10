@@ -2,9 +2,9 @@
 const sequelize = require('../config/config');
 
 //require models
-const { Band, Post, User, UserBand } = require('../models');
+const { Band, Post, User } = require('../models');
 
-//phase 1 create users, bands, and posts
+//phase 1 create users, bands, and posts 
 //phase 2 add category and post data
 const bandData = require('./bandSeeds.json');
 // const catData = require('./catSeeds.json');
@@ -33,7 +33,7 @@ const seedDatabase = async () => {
   for (const post of postData) {
     await Post.create({
       ...post,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
+      user_id: bands[Math.floor(Math.random() * users.length)].id,
     });
   }
 
