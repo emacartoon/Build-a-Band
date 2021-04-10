@@ -82,7 +82,8 @@ header, .project:not(:last-child) {
 
 .flex-child {
   flex: 1;
-  border: 2px solid yellow;
+  margin-right: 10px;
+  padding: 10px;
 }  
 
 .flex-child:first-child {
@@ -91,19 +92,20 @@ header, .project:not(:last-child) {
 
 .create-acc-txt {
   text-align:center;
+  font-size: 24px;
 }
 
 /* Side nav & Home Page content*/
 nav.sidenav {
-  height: 100vh;
+  height: 100%;
   width: 300px;
   position: relative;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: rgb(233, 233, 233);
   overflow-x: hidden;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .sidenav a {
@@ -115,11 +117,15 @@ nav.sidenav {
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #000;
 }
 
 .main-content {
   
+}
+
+input {
+  width: 100%;
 }
 
 @media screen and (max-height: 450px) {
