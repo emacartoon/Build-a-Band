@@ -11,12 +11,14 @@ const sequelize = require("../config/config.js");
 // const Category = require('./Category')
 
 //extend model
-class User extends Model {checkPassword(){}}
-
+class User extends Model { 
+  checkPassword(){}
+}
 User.init(
      {
       id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.UUID,
+        defaultValue: sequelize.UUIDV4,
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,

@@ -1,8 +1,8 @@
 //require all models
 const User = require('./User');
+const Band = require('./Band');
 const Post = require('./Post');
 // const Tag = require('./Tags');
-const Band = require('./Band');
 // const Category = require('./Category');
 
 User.hasMany(Post, {

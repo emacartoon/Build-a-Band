@@ -26,6 +26,10 @@ const session = require('express-session');
 //require sequelize store
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+//require UUID for ID#s
+const { v4: uuidv4 } = require('uuid');
+uuidv4();
+
 //require axios
 const axios = require('axios').default;
 
@@ -43,20 +47,20 @@ const sess = {
 //create helpers
 const hbs = exphbs.create({ helpers });
 
-//get random user using axios
-async function getUser() {
-  try {
-    const response = await axios.get('/user?ID=12345');
-    console.log(response);
-  } catch (error) {
-    console.error(error);
-  }
-}
+// //get random user using axios
+// async function getUser() {
+//   try {
+//     const response = await axios.get('/user?ID=12345');
+//     console.log(response);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 
 //listen on PORT 3001
 const PORT = process.env.PORT || 3001;
 
-//server user express
+//server use express's JSON parser
 app.use(express.json());
 
 //app use encoded url
