@@ -87,4 +87,4 @@ sequelize.sync({ force: false }).then(() => {
 });
 
 //invoke getUser function
-getUser();
+//  
