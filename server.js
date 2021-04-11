@@ -1,4 +1,7 @@
-
+require('dotenv').config();
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const customAuthMiddleware = require('./middleware/custom-auth-middleware');
 //require file path
 const path = require('path');
 
@@ -50,7 +53,7 @@ const hbs = exphbs.create({ helpers });
 //get random user using axios
 async function getUser() {
   try {
-    const response = await axios.get('/user?ID=12345');
+    const response = await axios.get('/user?ID=${user_id}');
     console.log(response);
   } catch (error) {
     console.error(error);
@@ -83,8 +86,15 @@ app.set('view engine', 'handlebars');
 
 //sync sequelize
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
 });
+// directory references
+const clientDir = path.join(__dirname, '../client');
+// Express middleware that allows POSTing data
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 //invoke getUser function
 getUser();
+
+
