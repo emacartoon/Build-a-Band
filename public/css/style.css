@@ -39,8 +39,7 @@ header, .project:not(:last-child) {
   }
   
   .img-logo {
-    width: 100%;
-    height: auto;
+    height: 150px;
     margin: 0 auto;
   }
   
@@ -125,6 +124,15 @@ input {
   width: 100%;
 }
 
+footer {
+  height: 250px;
+  width: 100%;
+  text-align: center;
+  background-color: #065b83;
+  color: #ffffff;
+  padding-top: 20px;
+  margin-top: 10px;
+}
 
 /* nav a {
   text-decoration: none;
