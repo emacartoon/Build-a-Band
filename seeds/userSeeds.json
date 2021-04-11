@@ -1,20 +1,50 @@
 [
     {
-      "id": "1",
+      "id": "b2fca301-f044-4463-bc7c-ece0391cbe4d",
       "name": "The Edge",
       "email": "theedge@u2.com",
       "password": "password12345"
     },
     {
-      "id": "2",
+      "id": "b1e7a7b1-793d-4d20-8013-7b25e0457599",
       "name": "Animal",
       "email": "animal@muppets.com",
       "password": "password12345"
     },
     {
-      "id": "3",
+      "id": "4be0215a-7c7b-4914-b101-ecf001eb4f34",
+      "name": "Elvis Presley",
+      "email": "Elvis@elvis.com",
+      "password": "password12345"
+    },
+    {
+      "id": "faa8be26-b41a-4cc9-93c5-0bfbc341614e",
       "name": "Gene Simmons",
       "email": "Genie@kiss.com",
+      "password": "password12345"
+    },
+    {
+      "id": "d79801b6-e9f3-45b3-81f3-c7450f21a3e7",
+      "name": "Ace Frehley",
+      "email": "Ace@kiss.com",
+      "password": "password12345"
+    },
+    {
+      "id": "7c8087b4-d556-40ec-98b0-a9a39723a1b5",
+      "name": "Paul Stanley",
+      "email": "Paul@kiss.com",
+      "password": "password12345"
+    },
+    {
+      "id": "f71f0d63-dddf-4fb0-991a-2e84e45680fd",
+      "name": "Peter Criss",
+      "email": "Peter@kiss.com",
+      "password": "password12345"
+    },
+    {
+      "id": "c57331a0-7cee-454b-8c34-b16ecd6e33e8",
+      "name": "Madonna",
+      "email": "Ma@donna.com",
       "password": "password12345"
     }
   ]

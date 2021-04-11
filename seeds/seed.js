@@ -5,13 +5,14 @@ const sequelize = require('../config/config');
 const { Band, Post, User } = require('../models');
 
 //phase 1 create users, bands, and posts 
-//phase 2 add category and post data
-const bandData = require('./bandSeeds.json');
-// const catData = require('./catSeeds.json');
-const postData = require('./postSeeds.json');
-// const tagData = require('./tagSeeds.json');
-// const userBandData = require('./userBandSeeds.json');
 const userData = require('./userSeeds.json');
+const bandData = require('./bandSeeds.json');
+const postData = require('./postSeeds.json');
+// //phase 2 add category and post data
+// const catData = require('./catSeeds.json');
+// const tagData = require('./tagSeeds.json');
+// //phase 3 have unique password validation for managing Band pages, as well as including location search parameters and a Google Map function
+// const userBandData = require('./userBandSeeds.json');
 
 //declare seedDatabase function
 const seedDatabase = async () => {

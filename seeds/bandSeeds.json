@@ -5,9 +5,8 @@
       "email": "tink@pixiesmusic.com",
       "password": "password12345",
       "website": "www.pixiesmusic.com",
-      "user": "",
+      "user": "b2fca301-f044-4463-bc7c-ece0391cbe4d",
       "post": "",
-      "band": ""
     },
     {
       "id": "2",
@@ -15,9 +14,8 @@
       "email": "admin@technomancer.com",
       "password": "password12345",
       "website": "www.technomancer.com",
-      "user": "",
-      "post": "",
-      "band": ""
+      "user": ["b2fca301-f044-4463-bc7c-ece0391cbe4d", "b1e7a7b1-793d-4d20-8013-7b25e0457599", "c57331a0-7cee-454b-8c34-b16ecd6e33e8"],
+      "post": ""
     },
     {
       "id": "3",
@@ -25,9 +23,8 @@
       "email": "rollrock@coverband.org",
       "password": "password12345",
       "website": "www.rollrock.bandcamp.com",
-      "user": "",
-      "post": "",
-      "band": ""
+      "user": ["faa8be26-b41a-4cc9-93c5-0bfbc341614e", "d79801b6-e9f3-45b3-81f3-c7450f21a3e7", "7c8087b4-d556-40ec-98b0-a9a39723a1b5", "f71f0d63-dddf-4fb0-991a-2e84e45680fd"],
+      "post": "1"
     },
     {
         "id": "4",
@@ -36,7 +33,6 @@
         "password": "password12345",
         "website": "www.shortbus.bandcamp.com",
         "user": "",
-        "post": "",
-        "band": ""
+        "post": ""
     }
 ]

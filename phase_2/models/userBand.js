@@ -1,10 +1,10 @@
 //require sequelize, datatypes
 const { DataTypes } = require("sequelize");
-const sequelize = require("../config/config.js");
+const sequelize = require("../../config/config.js");
 
 //require users and bands
-const User = require('./User');
-const Band = require('./Band')
+const User = require('../../models/User');
+const Band = require('../../models/Band')
 const UserBand = sequelize.define('UserBands', {
     BandId: {
     type: DataTypes.INTEGER,
