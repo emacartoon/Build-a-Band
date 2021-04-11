@@ -1,6 +1,6 @@
 //require sequelize, model, datatypes
-const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/config.js");
+const { Model, DataTypes } = require("sequelize");
 // const { User } = require('../models');
 
 //require all models
@@ -17,10 +17,9 @@ class User extends Model {
 User.init(
      {
       id: {
-        type: DataTypes.UUID,
+        type: DataTypes.UUIDV4,
         defaultValue: sequelize.UUIDV4,
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
       },
       name: {
