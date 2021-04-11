@@ -5,49 +5,33 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Build-a-Band</title>
-  {{!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> --}}
   <link rel="stylesheet" type="text/css" href="/css/jass.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{!-- google fonts --}}
-  {{!--
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> --}}
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet">
-  {{!-- animate css --}}
-  {{!--
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet"
-    integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous"> --}}
-  {{!-- Bulma - because Materialize was giving us problems --}}
-  {{!--
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"> --}}
-  <link href="../css/style.css" rel="stylesheet" type="text/css" media="screen">
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 
 
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <!-- Bulma Navbar -->
-      <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-      </head>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <img "img-logo" src="/img/Build-a-Band_logo.png" alt="Build-a-Band" width="112" height="28">
-          </a>
-
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-            data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+        <div class="logo">
+        <a href="/"><img class="img-logo" src="/img/Build-a-Band_logo.png" alt="Build-a-Band" height="250px" /></a>
         </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
+        {{#if logged_in}}
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-light" href="/dashboard">My Profile</a>
+                <a class="button is-light" href="/">Log Out</a>
+              </div>
+            </div>
+          </div>
+        {{else}}
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
@@ -55,36 +39,41 @@
               </div>
             </div>
           </div>
-        </div>
-      <nav>
-        <div class="logo">
-        <a href="/"><img class="img-logo" src="/img/Build-a-Band_logo.png" alt="Build-a-Band"></a>
-        </div>
-        {{#if logged_in}}
-        <a class="signup" href="/dashboard">Profile</a> |
-        <button class="no-button" id="logout">Logout</button>
-        {{else}}
-        <a class="login" href="/login-signup">Login</a>
         {{/if}}
-      </nav>
-    </header>
 
-    {{{ body }}}
+    </header>
+  <div class="row">
+    <nav class="sidenav">
+      <form>
+        <!--Search band name -->
+        <label for="band">Search Band</label>
+        <input type="text" id="band" name="band">
+
+        <!--Search band name -->
+        <label for="username">Search User</label>
+        <input type="text" id="username" name="username">
+
+        <!--Search band name -->
+        <label for="zipcode">Search ZipCode</label>
+        <input type="text" id="zipcode" name="zipcode">
+      </form>
+    </nav>
+
+    <div class="flex-column justify-space-around">
+     {{{ body }}}
+    </div>
   </div>
+
+  <footer>
+    <p>Created by Group 3 - Noor Abdukadir, Dylan Korte, Dan Lucas, and Emma Lysyk </p>
+  </footer>
+
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <!--Not sure I will be using a JQuery. . . but for now. -->
-  {{!--
-  <script src="https://unpkg.com/popper.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> <!-- Icons -->
-    {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/geolocator/2.1.3/geolocator.min.js"></script> --}}
- <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script> 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/geolocator/2.1.3/geolocator.min.js"></script> --}}
 
- </body>
+</body>
 
 </html>
