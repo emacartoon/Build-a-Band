@@ -1,8 +1,14 @@
 const router = require("express").Router();
+// const { UUIDV4 } = require("sequelize/types");
 const { User } = require("../../models");
 
-router.post('/', async (req, res) => {
-
+router.post("/login-signup", async (req, res) => {
+  const user = new User({
+    id: UUIDV4,
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
+  });
   try {
     const userData = await User.create(req.body);
     req.session.save(() => {
