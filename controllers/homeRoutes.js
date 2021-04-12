@@ -1,85 +1,78 @@
-const router = require('express').Router();
-const { User, Post, Band  } = require('../models');
-const withAuth = require('../utils/auth');
+const router = require("express").Router();
+const { User, Post, Band } = require("../models");
+const withAuth = require("../utils/auth");
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
-
-    res.render('home', { 
-      logged_in: req.session.logged_in 
+    res.render("home", {
+      loggedIn: req.session.loggedIn,
     });
-  } catch (err) { 
+  } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-router.get('/build-a-band', async (req, res) => {
+router.get("/build-a-band", async (req, res) => {
   try {
-
-    res.render('build-a-band', { 
-      logged_in: req.session.logged_in 
+    res.render("build-a-band", {
+      loggedIn: req.session.loggedIn,
     });
-  } catch (err) { 
+  } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-router.get('/create', async (req, res) => {
+router.get("/create", async (req, res) => {
   try {
-
-    res.render('writePost', { 
-      logged_in: req.session.logged_in 
+    res.render("writePost", {
+      loggedIn: req.session.loggedIn,
     });
-  } catch (err) { 
+  } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-router.get('/dashboard', async (req, res) => {
+router.get("/dashboard", async (req, res) => {
   try {
-
-    res.render('dashboard', { 
-      logged_in: req.session.logged_in 
+    res.render("dashboard", {
+      loggedIn: req.session.loggedIn,
     });
-  } catch (err) { 
+  } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-router.get('/login', async (req, res) => {
+router.get("/login", async (req, res) => {
   try {
-
-    res.render('login-signup', { 
-      logged_in: req.session.logged_in 
+    res.render("login-signup", {
+      loggedIn: req.session.loggedIn,
     });
-  } catch (err) { 
+  } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
 
-
-
-router.get('/post/:id', async (req, res) => {
+router.get("/post/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ["name"],
         },
       ],
     });
 
     const post = postData.get({ plain: true });
 
-    res.render('single-post', {
+    res.render("single-post", {
       post,
-      logged_in: req.session.logged_in
+      loggedIn: req.session.loggedIn,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -87,33 +80,33 @@ router.get('/post/:id', async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/post', withAuth, async (req, res) => {
+router.get("/post", withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
+    const userData = await User.findByPk(req.session.userId, {
+      attributes: { exclude: ["password"] },
       include: [{ model: Post }],
     });
 
     const user = userData.get({ plain: true });
 
-    res.render('writePost', {
+    res.render("writePost", {
       user,
-      logged_in: true
+      loggedIn: true,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/login-signup', (req, res) => {
+router.get("/login-signup", (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/dashboard');
+  if (req.session.loggedIn) {
+    res.redirect("/dashboard");
     return;
   }
 
-  res.render('login-signup');
+  res.render("login-signup");
 });
 
 module.exports = router;
