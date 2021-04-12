@@ -25,33 +25,6 @@
   margin-bottom: -220px;
 }
 
-
-.user-dashboard {
-  display: flex;
-  justify-content: center;
-  background-color: #f0f0f0;
-  padding: 2rem;
-}
-.tags{
-  position: relative;
-   background-color: #f0f0f0;
-   width: 100%;
-   justify-content: center;
-   margin-top: 20px;
-  height: 100px;
-}
-.image {
-  border-radius: 100%;
-  width: 200px;
-  height: auto;
-}
-
-.info-footer {
-  margin-top: 200px;
-}
-
-
-
 .user-dashboard {
   display: flex;
   justify-content: center;
