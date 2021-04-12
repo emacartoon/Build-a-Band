@@ -63,17 +63,16 @@ THEN I am automatically signed out of the site  <br />
 ## Technology Used
  
 JavaScript
-jQuery
-Handlebars 
-Node.js 
-Express.js 
-Sequelize 
+Handlebars
+Node.js 
+Express.js
+Sequelize 
 MySQL2
-Jaws DB
+Jaws DB
 Bcrypt
 ESLint
 Dotenv
-
+Bulma
   
 ## Mockups and Screenshots
 ### Wireframes

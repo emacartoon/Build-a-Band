@@ -51,13 +51,13 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //controls session whether logged in or logout in
 const sess = {
-  secret: "Super secret secret",
-  cookie: {},
-  resave: false,
-  saveUninitialized: true,
-  store: new SequelizeStore({
-    db: sequelize,
-  }),
+    secret: "Super secret secret",
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+        db: sequelize,
+    }),
 };
 //use session app
 app.use(session(sess));
@@ -73,5 +73,5 @@ app.set("view engine", "handlebars");
 
 //sync sequelize
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
+    app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
 });
