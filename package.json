@@ -12,6 +12,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "ajax": "0.0.4",
         "auth": "^0.0.1",
         "axios": "^0.21.1",
         "axios-oauth-client": "^1.4.0",

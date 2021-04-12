@@ -4,7 +4,7 @@ $(function() {
       $('.login').on('click', login);
     }
   
-    if (window.location.pathname === '/register') {
+    if (window.location.pathname === '/login-signup') {
       $('.login-form').remove()
       $('.signup').on('click', signup);
     }
