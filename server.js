@@ -90,6 +90,7 @@ sequelize.sync({ force: false }).then(() => {
 });
 // directory references
 const clientDir = path.join(__dirname, '../client');
+
 // Express middleware that allows POSTing data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
