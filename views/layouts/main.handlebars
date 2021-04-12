@@ -11,7 +11,7 @@
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="/css/style.css" rel="stylesheet" type="text/css" media="screen">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 
 
@@ -22,14 +22,15 @@
     <div class="logo">
       <a href="/"><img class="img-logo" src="/img/Build-a-Band_logo.png" alt="Build-a-Band" height="250px" /></a>
     </div>
-    {{#if logged_in}}
+    {{#if loggedIn}}
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-light" href="/dashboard">My Profile</a>
-          <a class="button is-light" href="/">Log Out</a>
+          <a id="logout" class="button is-light" href="/">Log Out</a>
         </div>
       </div>
+      <script src="/js/logout.js"></script>
     </div>
     {{else}}
     <div class="navbar-end">
@@ -44,9 +45,12 @@
   </header>
   <div class="row">
     <nav class="sidenav">
-      {{#if logged_in}}
-
+      <div>
+        <a class="button is-light" href="/search">Search</a>
+      </div>
+    {{#if logged_in}}
       <form>
+
         <!--Search band name -->
         <label for="band">Search Band</label>
         <input type="text" id="band" name="band">
@@ -63,7 +67,7 @@
       {{/if}}
     </nav>
 
-    <div class="flex-column justify-space-around">
+    <div class="flex-column justify-space-around content-container" >
       {{{ body }}}
     </div>
   </div>
@@ -72,11 +76,6 @@
     <p>Created by Group 3 - Noor Abdukadir, Dylan Korte, Dan Lucas, and Emma Lysyk </p>
   </footer>
 
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
 </body>
 
