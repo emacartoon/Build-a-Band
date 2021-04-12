@@ -11,39 +11,41 @@
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet">
-<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link href="../css/style.css" rel="stylesheet" type="text/css" media="screen">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 
 
 </head>
 
 <body>
-    <header class="display-flex justify-space-between align-center p-2">
-        <div class="logo">
-        <a href="/"><img class="img-logo" src="/img/Build-a-Band_logo.png" alt="Build-a-Band" height="250px" /></a>
+  <header class="display-flex justify-space-between align-center p-2">
+    <div class="logo">
+      <a href="/"><img class="img-logo" src="/img/Build-a-Band_logo.png" alt="Build-a-Band" height="250px" /></a>
+    </div>
+    {{#if logged_in}}
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-light" href="/dashboard">My Profile</a>
+          <a class="button is-light" href="/">Log Out</a>
         </div>
-        {{#if logged_in}}
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-light" href="/dashboard">My Profile</a>
-                <a class="button is-light" href="/">Log Out</a>
-              </div>
-            </div>
-          </div>
-        {{else}}
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                <a class="button is-light" href="/login-signup">Log In</a>
-              </div>
-            </div>
-          </div>
-        {{/if}}
+      </div>
+    </div>
+    {{else}}
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-light" href="/login-signup">Log In</a>
+        </div>
+      </div>
+    </div>
+    {{/if}}
 
-    </header>
+  </header>
   <div class="row">
     <nav class="sidenav">
+      {{#if logged_in}}
+
       <form>
         <!--Search band name -->
         <label for="band">Search Band</label>
@@ -57,10 +59,12 @@
         <label for="zipcode">Search ZipCode</label>
         <input type="text" id="zipcode" name="zipcode">
       </form>
+      {{else}}
+      {{/if}}
     </nav>
 
     <div class="flex-column justify-space-around">
-     {{{ body }}}
+      {{{ body }}}
     </div>
   </div>
 
