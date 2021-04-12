@@ -34,9 +34,6 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const { v4: uuidv4 } = require('uuid');
 uuidv4();
 
-//require axios
-const axios = require('axios').default;
-
 //controls session whether logged in or logout in
 const sess = {
     secret: 'Super secret secret',
@@ -94,6 +91,3 @@ const clientDir = path.join(__dirname, '../client');
 // Express middleware that allows POSTing data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-//invoke getUser function
-getUser();
