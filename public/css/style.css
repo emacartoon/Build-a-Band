@@ -147,7 +147,6 @@ header, .project:not(:last-child) {
 
 /* Side nav & Home Page content*/
 nav.sidenav {
-  height: 100%;
   width: 300px;
   position: relative;
   z-index: 1;
