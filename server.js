@@ -2,6 +2,7 @@ require('dotenv').config();
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const customAuthMiddleware = require('./middleware/custom-auth-middleware');
+const jQuery = require('jquery');
 //require file path
 const path = require('path');
 
