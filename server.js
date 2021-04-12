@@ -90,4 +90,4 @@ const clientDir = path.join(__dirname, '../client');
 
 // Express middleware that allows POSTing data
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json())
+app.use(bodyParser.json());
