@@ -39,27 +39,26 @@ const axios = require('axios').default;
 
 //controls session whether logged in or logout in
 const sess = {
-  secret: 'Super secret secret',
-  cookie: {},
-  resave: false,
-  saveUninitialized: true,
-  store: new SequelizeStore({
-    db: sequelize
-  })
+    secret: 'Super secret secret',
+    cookie: {},
+    resave: false,
+    saveUninitialized: true,
+    store: new SequelizeStore({
+        db: sequelize
+    })
 };
 
 //create helpers
 const hbs = exphbs.create({ helpers });
 
-//get random user using axios
-async function getUser() {
-  try {
-    const response = await axios.get('/user?ID=${user_id}');
-    console.log(response);
-  } catch (error) {
-    console.error(error);
-  }
-}
+// trust first proxy
+app.set('trust proxy', 1)
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true }
+}))
 
 //listen on PORT 3001
 const PORT = process.env.PORT || 3001;
@@ -87,7 +86,7 @@ app.set('view engine', 'handlebars');
 
 //sync sequelize
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
+    app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
 });
 // directory references
 const clientDir = path.join(__dirname, '../client');
@@ -97,5 +96,3 @@ app.use(bodyParser.json());
 
 //invoke getUser function
 getUser();
-
-
